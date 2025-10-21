@@ -456,7 +456,7 @@ body {
     transition: all 0.3s ease;
 }
 
-footer {
+.footer {
     display: flex;
     font-family: 'Poppins', sans-serif;
     color: white;
@@ -470,7 +470,7 @@ footer {
 }
 
 .version {
-    background: linear-gradient(140deg, rgba(0, 200, 83, 1) 0%, rgb(150, 255, 131));
+    background: linear-gradient(140deg, rgba(0, 200, 83, 1) 0%, rgb(55, 121, 44));
     padding: 10px;
     border-radius: 20px;
 }
