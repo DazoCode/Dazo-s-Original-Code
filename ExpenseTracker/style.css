@@ -539,17 +539,24 @@ body {
     }
 
     .balance-container-small {
-        max-width: 300px;
         min-width: 300px;
+        height: 100px;
         margin: auto;
-    }   
+        font-size: clamp(0.7rem, 1vw, 2rem);       
+    }  
+
+    .balance-headers {
+        transform: translateY(-10px);
+    }
 
     .back {
         align-self: flex-start;
+        width: 100px;
+        font-size: clamp(0.7rem, 1vw, 2rem);
     }
 
     .header-title {
-        margin-left: 120px;
+        margin-left: 60px;
         font-size: clamp(2rem, 10vw, 3.5rem);
         top: 30px;
     }
@@ -562,7 +569,7 @@ body {
 
     .expense-item {
         display:flex;
-        width: 80%;
+        width: 70%;
         height: 140px;
         font-size: clamp(0.4rem, 2vw, 2rem);
         align-items: center;
@@ -571,7 +578,7 @@ body {
 
     .expense-item-more {
         display:flex;
-        width: 80%;
+        width: 70%;
         height: 140px;
         font-size: clamp(0.4rem, 2vw, 2rem);
         align-items: center;
@@ -580,7 +587,7 @@ body {
 
     .expense-list {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
     }
 
 
