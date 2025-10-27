@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker</title>
+
+    <link href="style.css" rel="stylesheet">
+    <link rel="icon" type="images/png" href="images/balance-icon.png">
+</head>
+<body>
+
+    
+    <main id="main-default" class="pages">
+        <div class="main-page">
+        <div class="balance-container"> 
+            <h1>Your Balance</h1>
+            <h2>P0.00</h2>
+        </div>
+
+    <section class="main-options-container">
+
+        <div class="add-expense" onclick="showPage('expense-page')">
+            <img src="images/expense-icon.png" alt="Add Expense Icon" class="icons">
+            <h1>Add Expense</h1>
+        </div>
+
+        <div class="add-balance" onclick="showPage('balance-page')">
+            <img src="images/balance-icon.png" alt="Add Balance Icon" class="icons">
+            <h1>Add Balance</h1>
+        </div>
+
+        <div class="expense-history" onclick="showPage('history-page')">
+            <img src="images/history-icon.png" alt="Check History Icon" class="icons">
+            <h1>Check History</h1>
+        </div>
+        </div>
+    </section>
+
+        <div class="footer">
+            <h1 class="version">Version 1.1</h1>
+        </div>
+    </main>
+    
+    <section id="expense-page" class="pages">
+        <header class="header-display">
+            <button class="back" onclick="showPage('main-default')">BACK</button>
+            <h1 class="header-title">Expenses</h1>
+
+         <div class="balance-container-small">
+            <div class="balance-headers">
+            <h1>Your Balance</h1>
+            <h2>P0.00</h2>
+            </div>
+        </div>
+         </header>
+        
+        <main class="expense-content">
+            <div class="expense-list">
+                <div class="expense-item" data-name="Jeepney Ride" data-amount="11">
+                    <h1>Jeepney Ride</h1>    
+                </div>
+                <div class="expense-item" data-name="Canteen Meal" data-amount="100"">
+                    <h1>Canteen Meal</h1>    
+                </div>
+                <div class="expense-item" data-name="Train Ride" data-amount="15">
+                    <h1>Train Ride</h1>    
+                </div>
+                <div class="expense-item" data-name="MoveIt" data-amount="142">
+                    <h1>MoveIt Ride</h1>    
+                </div>
+                <div class="expense-item-more">
+                    <h1>Add More</h1>    
+                </div>
+            </div>
+
+            <aside class="calc-amt-container">
+                <div class="calc-amt-content">
+                    <h1>Enter Amount</h1>
+                    
+                    <div class="input-fields-exp">
+                        <input type="number" placeholder="P0.00" class="amount-input-exp">
+                        <button class="add-button-exp">Add</button>
+                    </div>
+                </div>
+
+                <div class="total-output-exp">
+                        <h1>Total Amount:</h1>
+                        <h1 id="total-amount-output-exp">P0.00</h1> 
+                </div>
+                
+                <button class="calc-btn-exp">Calculate</button>
+
+            </aside>
+        </main>
+        
+
+    </section>
+
+    <section id="balance-page" class="pages">
+        <header class="header-display">
+            <button class="back" onclick="showPage('main-default')">BACK</button>
+         
+            <h1 class="header-title">Balance</h1>
+
+         <div class="balance-container-small"> 
+            <div class="balance-headers">
+            <h1>Your Balance</h1>
+            <h2>P0.00</h2>
+            </div>
+        </div>
+        </header>
+
+        <main class="balance-content">
+            <aside class="calc-bal-container">
+                <div class="calc-bal-content">
+                    <h1>Enter Amount</h1>
+                    
+                    <div class="input-fields-bal"">
+                        <input type="text" placeholder="P0.00" class="amount-input-bal">
+                    </div>
+
+                    <div class="keypad-container">
+                        <h1 class="keypad-item">1</h1>
+                        <h1 class="keypad-item">2</h1>
+                        <h1 class="keypad-item">3</h1>
+                        <h1 class="keypad-item">4</h1>
+                        <h1 class="keypad-item">5</h1>
+                        <h1 class="keypad-item">6</h1>
+                        <h1 class="keypad-item">7</h1>
+                        <h1 class="keypad-item">8</h1>
+                        <h1 class="keypad-item">9</h1>
+                        <h1 class="keypad-item">.</h1>
+                        <h1 class="keypad-item">0</h1>
+                        <h1 class="keypad-item" id="backspace"><img src="images/backspace-keypad.png" alt="Delete" id="delete-keypad"></h1>
+                    </div>
+
+                </div>
+                
+                <button class="add-bal-btn">Add</button>
+            </aside>
+        </main>
+
+    </section>
+
+    <section id="history-page" class="pages">
+        <header class="header-display">
+            <button class="back" onclick="showPage('main-default')">BACK</button>
+
+            <h1 class="header-title">History</h1>
+       
+         <div class="balance-container-small"> 
+            <div class="balance-headers">
+            <h1>Your Balance</h1>
+            <h2>P0.00</h2>
+            </div>
+        </div>
+        </header>
+
+        <main class="history-container">
+            <h1 class="no-trans">No Transactions Yet!</h1>
+
+            <section class="trans-history">
+                <img src="images/delete-icon.jpg" alt="Clear History" class="clear-history" onclick="clearTransactionHistory()">
+            </section>
+
+        </main>
+
+    </section>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
